@@ -42,7 +42,7 @@ public class UserEntity {
 
     @Override
     public String toString() {
-        return "User{" + "id='" + this.id + '\'' + ", firstName='" + this.firstName + '\''
+        return "UserEntity{" + "id='" + this.id + '\'' + ", firstName='" + this.firstName + '\''
                 + ", lastName='" + this.lastName + '\'' + '}';
     }
 

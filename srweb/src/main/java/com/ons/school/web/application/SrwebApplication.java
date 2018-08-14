@@ -19,12 +19,12 @@ public class SrwebApplication {
 /*	@Override
 	public void run(String... args) throws Exception {
 	//	this.userRepository.deleteAll();
-		User user = saveUser();
+		UserEntity user = saveUser();
 		System.out.println(this.userRepository.findById(user.getId()));
 	}
 
-	private User saveUser() {
-		User user = new User();
+	private UserEntity saveUser() {
+		UserEntity user = new UserEntity();
 		user.setId(UUID.randomUUID().toString());
 		user.setFirstName("Alice");
 		user.setLastName("Smith");

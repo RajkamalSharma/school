@@ -2,31 +2,68 @@ package com.ons.school.common.vo;
 
 public class User {
 
-    private String id;
-    private String firstName;
-    private String lastName;
+    private String firstname;
+    private String lastname;
+    private School school;
+    private String roleCode;
 
-    public String getId() {
-        return id;
+    private String userId;
+    private String middleName;
+    private String userStatus;
+
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getLastname() {
+        return lastname;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
-    public String getLastName() {
-        return lastName;
+    public School getSchool() {
+        return school;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setSchool(School school) {
+        this.school = school;
+    }
+
+    public String getRoleCode() {
+        return roleCode;
+    }
+
+    public void setRoleCode(String roleCode) {
+        this.roleCode = roleCode;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public String getMiddleName() {
+        return middleName;
+    }
+
+    public void setMiddleName(String middleName) {
+        this.middleName = middleName;
+    }
+
+    public String getUserStatus() {
+        return userStatus;
+    }
+
+    public void setUserStatus(String userStatus) {
+        this.userStatus = userStatus;
     }
 }
