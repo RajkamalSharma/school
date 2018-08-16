@@ -18,84 +18,84 @@ public class StudentEntity implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="Student_id")
-	private int student_id;
+	private int studentId;
 
 	@Column(name="C_Address_Line_1")
-	private String c_Address_Line_1;
+	private String cAddressLine1;
 
 	@Column(name="C_Address_Line_2")
-	private String c_Address_Line_2;
+	private String cAddressLine2;
 
 	@Column(name="C_City")
-	private String c_City;
+	private String cCity;
 
 	@Column(name="C_Postal_COde")
-	private String c_Postal_COde;
+	private String cPostalCOde;
 
 	@Column(name="C_State")
-	private String c_State;
+	private String cState;
 
 	@Column(name="Class_Id")
-	private Long class_Id;
+	private Long classId;
 
 	@Column(name="Date_Of_Birth")
     @Temporal( TemporalType.DATE)
-	private Date date_Of_Birth;
+	private Date dateOfBirth;
 
 	@Column(name="Date_of_Enrollment")
     @Temporal( TemporalType.DATE)
-	private Date date_of_Enrollment;
+	private Date dateOfEnrollment;
 
 	@Column(name="Emergency_Contact_number")
-	private String emergency_Contact_number;
+	private String emergencyContactNumber;
 
 	@Column(name="Father_Name")
-	private String father_Name;
+	private String fatherName;
 
 	@Column(name="Father_Occupation")
-	private String father_Occupation;
+	private String fatherOccupation;
 
 	@Column(name="Last_attended_School")
-	private String last_attended_School;
+	private String lastAttendedSchool;
 
 	@Column(name="Mother_Name")
-	private String mother_Name;
+	private String motherName;
 
 	@Column(name="Mother_Occupation")
-	private String mother_Occupation;
+	private String motherOccupation;
 
 	@Column(name="Other_Details")
-	private String other_Details;
+	private String otherDetails;
 
 	@Column(name="P_Address_Line_1")
-	private String p_Address_Line_1;
+	private String pAddressLine1;
 
 	@Column(name="P_Address_Line_2")
-	private String p_Address_Line_2;
+	private String pAddressLine2;
 
 	@Column(name="P_City")
-	private String p_City;
+	private String pCity;
 
 	@Column(name="P_Postal_COde")
-	private String p_Postal_COde;
+	private String pPostalCOde;
 
 	@Column(name="P_State")
-	private String p_State;
+	private String pState;
 
 	@Column(name="Roll_Number")
-	private int roll_Number;
+	private int rollNumber;
 
 	@Column(name="School_id")
-	private int school_id;
+	private int schoolId;
 
 	@Column(name="Student_First_name")
-	private String student_First_name;
+	private String studentFirstName;
 
 	@Column(name="Student_Last_name")
-	private String student_Last_name;
+	private String studentLastName;
 
 	@Column(name="Student_Middle_name")
-	private String student_Middle_name;
+	private String studentMiddleName;
 
 	@Column(name="UID")
 	private String uid;
@@ -103,220 +103,219 @@ public class StudentEntity implements Serializable {
     public StudentEntity() {
     }
 
-	public int getStudent_id() {
-		return this.student_id;
+	public int getStudentId() {
+		return studentId;
 	}
 
-	public void setStudent_id(int student_id) {
-		this.student_id = student_id;
+	public void setStudentId(int studentId) {
+		this.studentId = studentId;
 	}
 
-	public String getC_Address_Line_1() {
-		return this.c_Address_Line_1;
+	public String getcAddressLine1() {
+		return cAddressLine1;
 	}
 
-	public void setC_Address_Line_1(String c_Address_Line_1) {
-		this.c_Address_Line_1 = c_Address_Line_1;
+	public void setcAddressLine1(String cAddressLine1) {
+		this.cAddressLine1 = cAddressLine1;
 	}
 
-	public String getC_Address_Line_2() {
-		return this.c_Address_Line_2;
+	public String getcAddressLine2() {
+		return cAddressLine2;
 	}
 
-	public void setC_Address_Line_2(String c_Address_Line_2) {
-		this.c_Address_Line_2 = c_Address_Line_2;
+	public void setcAddressLine2(String cAddressLine2) {
+		this.cAddressLine2 = cAddressLine2;
 	}
 
-	public String getC_City() {
-		return this.c_City;
+	public String getcCity() {
+		return cCity;
 	}
 
-	public void setC_City(String c_City) {
-		this.c_City = c_City;
+	public void setcCity(String cCity) {
+		this.cCity = cCity;
 	}
 
-	public String getC_Postal_COde() {
-		return this.c_Postal_COde;
+	public String getcPostalCOde() {
+		return cPostalCOde;
 	}
 
-	public void setC_Postal_COde(String c_Postal_COde) {
-		this.c_Postal_COde = c_Postal_COde;
+	public void setcPostalCOde(String cPostalCOde) {
+		this.cPostalCOde = cPostalCOde;
 	}
 
-	public String getC_State() {
-		return this.c_State;
+	public String getcState() {
+		return cState;
 	}
 
-	public void setC_State(String c_State) {
-		this.c_State = c_State;
+	public void setcState(String cState) {
+		this.cState = cState;
 	}
 
-	public Long getClass_Id() {
-		return this.class_Id;
+	public Long getClassId() {
+		return classId;
 	}
 
-	public void setClass_Id(Long class_Id) {
-		this.class_Id = class_Id;
+	public void setClassId(Long classId) {
+		this.classId = classId;
 	}
 
-	public Date getDate_Of_Birth() {
-		return this.date_Of_Birth;
+	public Date getDateOfBirth() {
+		return dateOfBirth;
 	}
 
-	public void setDate_Of_Birth(Date date_Of_Birth) {
-		this.date_Of_Birth = date_Of_Birth;
+	public void setDateOfBirth(Date dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
 	}
 
-	public Date getDate_of_Enrollment() {
-		return this.date_of_Enrollment;
+	public Date getDateOfEnrollment() {
+		return dateOfEnrollment;
 	}
 
-	public void setDate_of_Enrollment(Date date_of_Enrollment) {
-		this.date_of_Enrollment = date_of_Enrollment;
+	public void setDateOfEnrollment(Date dateOfEnrollment) {
+		this.dateOfEnrollment = dateOfEnrollment;
 	}
 
-	public String getEmergency_Contact_number() {
-		return this.emergency_Contact_number;
+	public String getEmergencyContactNumber() {
+		return emergencyContactNumber;
 	}
 
-	public void setEmergency_Contact_number(String emergency_Contact_number) {
-		this.emergency_Contact_number = emergency_Contact_number;
+	public void setEmergencyContactNumber(String emergencyContactNumber) {
+		this.emergencyContactNumber = emergencyContactNumber;
 	}
 
-	public String getFather_Name() {
-		return this.father_Name;
+	public String getFatherName() {
+		return fatherName;
 	}
 
-	public void setFather_Name(String father_Name) {
-		this.father_Name = father_Name;
+	public void setFatherName(String fatherName) {
+		this.fatherName = fatherName;
 	}
 
-	public String getFather_Occupation() {
-		return this.father_Occupation;
+	public String getFatherOccupation() {
+		return fatherOccupation;
 	}
 
-	public void setFather_Occupation(String father_Occupation) {
-		this.father_Occupation = father_Occupation;
+	public void setFatherOccupation(String fatherOccupation) {
+		this.fatherOccupation = fatherOccupation;
 	}
 
-	public String getLast_attended_School() {
-		return this.last_attended_School;
+	public String getLastAttendedSchool() {
+		return lastAttendedSchool;
 	}
 
-	public void setLast_attended_School(String last_attended_School) {
-		this.last_attended_School = last_attended_School;
+	public void setLastAttendedSchool(String lastAttendedSchool) {
+		this.lastAttendedSchool = lastAttendedSchool;
 	}
 
-	public String getMother_Name() {
-		return this.mother_Name;
+	public String getMotherName() {
+		return motherName;
 	}
 
-	public void setMother_Name(String mother_Name) {
-		this.mother_Name = mother_Name;
+	public void setMotherName(String motherName) {
+		this.motherName = motherName;
 	}
 
-	public String getMother_Occupation() {
-		return this.mother_Occupation;
+	public String getMotherOccupation() {
+		return motherOccupation;
 	}
 
-	public void setMother_Occupation(String mother_Occupation) {
-		this.mother_Occupation = mother_Occupation;
+	public void setMotherOccupation(String motherOccupation) {
+		this.motherOccupation = motherOccupation;
 	}
 
-	public String getOther_Details() {
-		return this.other_Details;
+	public String getOtherDetails() {
+		return otherDetails;
 	}
 
-	public void setOther_Details(String other_Details) {
-		this.other_Details = other_Details;
+	public void setOtherDetails(String otherDetails) {
+		this.otherDetails = otherDetails;
 	}
 
-	public String getP_Address_Line_1() {
-		return this.p_Address_Line_1;
+	public String getpAddressLine1() {
+		return pAddressLine1;
 	}
 
-	public void setP_Address_Line_1(String p_Address_Line_1) {
-		this.p_Address_Line_1 = p_Address_Line_1;
+	public void setpAddressLine1(String pAddressLine1) {
+		this.pAddressLine1 = pAddressLine1;
 	}
 
-	public String getP_Address_Line_2() {
-		return this.p_Address_Line_2;
+	public String getpAddressLine2() {
+		return pAddressLine2;
 	}
 
-	public void setP_Address_Line_2(String p_Address_Line_2) {
-		this.p_Address_Line_2 = p_Address_Line_2;
+	public void setpAddressLine2(String pAddressLine2) {
+		this.pAddressLine2 = pAddressLine2;
 	}
 
-	public String getP_City() {
-		return this.p_City;
+	public String getpCity() {
+		return pCity;
 	}
 
-	public void setP_City(String p_City) {
-		this.p_City = p_City;
+	public void setpCity(String pCity) {
+		this.pCity = pCity;
 	}
 
-	public String getP_Postal_COde() {
-		return this.p_Postal_COde;
+	public String getpPostalCOde() {
+		return pPostalCOde;
 	}
 
-	public void setP_Postal_COde(String p_Postal_COde) {
-		this.p_Postal_COde = p_Postal_COde;
+	public void setpPostalCOde(String pPostalCOde) {
+		this.pPostalCOde = pPostalCOde;
 	}
 
-	public String getP_State() {
-		return this.p_State;
+	public String getpState() {
+		return pState;
 	}
 
-	public void setP_State(String p_State) {
-		this.p_State = p_State;
+	public void setpState(String pState) {
+		this.pState = pState;
 	}
 
-	public int getRoll_Number() {
-		return this.roll_Number;
+	public int getRollNumber() {
+		return rollNumber;
 	}
 
-	public void setRoll_Number(int roll_Number) {
-		this.roll_Number = roll_Number;
+	public void setRollNumber(int rollNumber) {
+		this.rollNumber = rollNumber;
 	}
 
-	public int getSchool_id() {
-		return this.school_id;
+	public int getSchoolId() {
+		return schoolId;
 	}
 
-	public void setSchool_id(int school_id) {
-		this.school_id = school_id;
+	public void setSchoolId(int schoolId) {
+		this.schoolId = schoolId;
 	}
 
-	public String getStudent_First_name() {
-		return this.student_First_name;
+	public String getStudentFirstName() {
+		return studentFirstName;
 	}
 
-	public void setStudent_First_name(String student_First_name) {
-		this.student_First_name = student_First_name;
+	public void setStudentFirstName(String studentFirstName) {
+		this.studentFirstName = studentFirstName;
 	}
 
-	public String getStudent_Last_name() {
-		return this.student_Last_name;
+	public String getStudentLastName() {
+		return studentLastName;
 	}
 
-	public void setStudent_Last_name(String student_Last_name) {
-		this.student_Last_name = student_Last_name;
+	public void setStudentLastName(String studentLastName) {
+		this.studentLastName = studentLastName;
 	}
 
-	public String getStudent_Middle_name() {
-		return this.student_Middle_name;
+	public String getStudentMiddleName() {
+		return studentMiddleName;
 	}
 
-	public void setStudent_Middle_name(String student_Middle_name) {
-		this.student_Middle_name = student_Middle_name;
+	public void setStudentMiddleName(String studentMiddleName) {
+		this.studentMiddleName = studentMiddleName;
 	}
 
 	public String getUid() {
-		return this.uid;
+		return uid;
 	}
 
 	public void setUid(String uid) {
 		this.uid = uid;
 	}
-
 }

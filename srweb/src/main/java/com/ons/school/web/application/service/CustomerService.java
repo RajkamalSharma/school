@@ -1,7 +1,6 @@
 package com.ons.school.web.application.service;
 
-
-import com.ons.school.common.vo.Customer;
+import com.ons.school.web.application.vo.Customer;
 
 public interface CustomerService {
 

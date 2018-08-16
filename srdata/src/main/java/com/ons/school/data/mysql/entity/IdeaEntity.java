@@ -18,17 +18,17 @@ public class IdeaEntity implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name = "Ideas_id")
-	private int ideas_id;
+	private int ideasId;
 
 	@OneToOne(fetch = FetchType.EAGER )
 	@JoinColumn(name = "Contributor_id")
 	private ContributorEntity contributor;
 
 	@Column(name = "Count_Of_Likes")
-	private int count_Of_Likes;
+	private int countOfLikes;
 
 	@Column(name = "Date_Of_Reply")
-	private Timestamp date_Of_Reply;
+	private Timestamp dateOfReply;
 
 
 	@ManyToOne(fetch = FetchType.EAGER )
@@ -37,20 +37,20 @@ public class IdeaEntity implements Serializable {
 	
 
 	@Column(name = "Solution_Text")
-	private String solution_Text;
+	private String solutionText;
 
 	@Column(name = "Student_Ids_Who_Liked")
-	private String student_Ids_Who_Liked;
+	private String studentIdsWhoLiked;
 
     public IdeaEntity() {
     }
 
-	public int getIdeas_id() {
-		return this.ideas_id;
+	public int getIdeasId() {
+		return ideasId;
 	}
 
-	public void setIdeas_id(int ideas_id) {
-		this.ideas_id = ideas_id;
+	public void setIdeasId(int ideasId) {
+		this.ideasId = ideasId;
 	}
 
 	public ContributorEntity getContributor() {
@@ -61,22 +61,21 @@ public class IdeaEntity implements Serializable {
 		this.contributor = contributor;
 	}
 
-	public int getCount_Of_Likes() {
-		return this.count_Of_Likes;
+	public int getCountOfLikes() {
+		return countOfLikes;
 	}
 
-	public void setCount_Of_Likes(int count_Of_Likes) {
-		this.count_Of_Likes = count_Of_Likes;
+	public void setCountOfLikes(int countOfLikes) {
+		this.countOfLikes = countOfLikes;
 	}
 
-	public Timestamp getDate_Of_Reply() {
-		return this.date_Of_Reply;
+	public Timestamp getDateOfReply() {
+		return dateOfReply;
 	}
 
-	public void setDate_Of_Reply(Timestamp date_Of_Reply) {
-		this.date_Of_Reply = date_Of_Reply;
+	public void setDateOfReply(Timestamp dateOfReply) {
+		this.dateOfReply = dateOfReply;
 	}
-
 
 	public IssueEntity getIssueEntity() {
 		return issueEntity;
@@ -86,20 +85,19 @@ public class IdeaEntity implements Serializable {
 		this.issueEntity = issueEntity;
 	}
 
-	public String getSolution_Text() {
-		return this.solution_Text;
+	public String getSolutionText() {
+		return solutionText;
 	}
 
-	public void setSolution_Text(String solution_Text) {
-		this.solution_Text = solution_Text;
+	public void setSolutionText(String solutionText) {
+		this.solutionText = solutionText;
 	}
 
-	public String getStudent_Ids_Who_Liked() {
-		return this.student_Ids_Who_Liked;
+	public String getStudentIdsWhoLiked() {
+		return studentIdsWhoLiked;
 	}
 
-	public void setStudent_Ids_Who_Liked(String student_Ids_Who_Liked) {
-		this.student_Ids_Who_Liked = student_Ids_Who_Liked;
+	public void setStudentIdsWhoLiked(String studentIdsWhoLiked) {
+		this.studentIdsWhoLiked = studentIdsWhoLiked;
 	}
-
 }

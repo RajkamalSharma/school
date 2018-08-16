@@ -15,11 +15,11 @@ import java.util.Date;
 
 @NamedQueries({
 
-@NamedQuery(name = "FETCH_NOTIFICATIONS", query = "SELECT o FROM NotificationEntity o WHERE o.school_id = :schoolId " +
-		"and o.notification_Start_Date <= :todaysDate  and o.notification_End_Date >= :todaysDate "),
+@NamedQuery(name = "FETCH_NOTIFICATIONS", query = "SELECT o FROM NotificationEntity o WHERE o.schoolId = :schoolId " +
+		"and o.notificationStartDate <= :todaysDate  and o.notificationEndDate >= :todaysDate "),
 
-@NamedQuery(name = "FETCH_ACTIVE_NOTIFICATIONS", query = "SELECT o FROM NotificationEntity o WHERE o.school_id = :schoolId " +
-				"and o.notification_Start_Date <= :todaysDate  and o.notification_End_Date >= :todaysDate  and o.show_Notification = true")
+@NamedQuery(name = "FETCH_ACTIVE_NOTIFICATIONS", query = "SELECT o FROM NotificationEntity o WHERE o.schoolId = :schoolId " +
+				"and o.notificationStartDate <= :todaysDate  and o.notificationEndDate >= :todaysDate  and o.showNotification = true")
 		
 		
 }) 
@@ -33,74 +33,73 @@ public class NotificationEntity implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "Notification_id")
-	private int notification_id;
+	private int notificationId;
 
 	@Column(name = "Notification_End_Date")
 	@Temporal(TemporalType.DATE)
-	private Date notification_End_Date;
+	private Date notificationEndDate;
 
 	@Column(name = "Notification_Start_Date")
 	@Temporal(TemporalType.DATE)
-	private Date notification_Start_Date;
+	private Date notificationStartDate;
 
 	@Column(name = "Notification_Text")
-	private String notification_Text;
+	private String notificationText;
 
 	@Column(name = "School_id")
-	private int school_id;
+	private int schoolId;
 
 	@Column(name = "Show_Notification")
-	private boolean show_Notification;
+	private boolean showNotification;
 
 	public NotificationEntity() {
 	}
 
-	public int getNotification_id() {
-		return this.notification_id;
+	public int getNotificationId() {
+		return notificationId;
 	}
 
-	public void setNotification_id(int notification_id) {
-		this.notification_id = notification_id;
+	public void setNotificationId(int notificationId) {
+		this.notificationId = notificationId;
 	}
 
-	public Date getNotification_End_Date() {
-		return this.notification_End_Date;
+	public Date getNotificationEndDate() {
+		return notificationEndDate;
 	}
 
-	public void setNotification_End_Date(Date notification_End_Date) {
-		this.notification_End_Date = notification_End_Date;
+	public void setNotificationEndDate(Date notificationEndDate) {
+		this.notificationEndDate = notificationEndDate;
 	}
 
-	public Date getNotification_Start_Date() {
-		return this.notification_Start_Date;
+	public Date getNotificationStartDate() {
+		return notificationStartDate;
 	}
 
-	public void setNotification_Start_Date(Date notification_Start_Date) {
-		this.notification_Start_Date = notification_Start_Date;
+	public void setNotificationStartDate(Date notificationStartDate) {
+		this.notificationStartDate = notificationStartDate;
 	}
 
-	public String getNotification_Text() {
-		return this.notification_Text;
+	public String getNotificationText() {
+		return notificationText;
 	}
 
-	public void setNotification_Text(String notification_Text) {
-		this.notification_Text = notification_Text;
+	public void setNotificationText(String notificationText) {
+		this.notificationText = notificationText;
 	}
 
-	public int getSchool_id() {
-		return this.school_id;
+	public int getSchoolId() {
+		return schoolId;
 	}
 
-	public void setSchool_id(int school_id) {
-		this.school_id = school_id;
+	public void setSchoolId(int schoolId) {
+		this.schoolId = schoolId;
 	}
 
-	public boolean isShow_Notification() {
-		return show_Notification;
+	public boolean isShowNotification() {
+		return showNotification;
 	}
 
-	public void setShow_Notification(boolean show_Notification) {
-		this.show_Notification = show_Notification;
+	public void setShowNotification(boolean showNotification) {
+		this.showNotification = showNotification;
 	}
-
 }

@@ -15,28 +15,27 @@ public class StateEntity implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "State_id")
-	private int state_id;
+	private int stateId;
 
 	@Column(name = "State_Name")
-	private String state_Name;
+	private String stateName;
 
 	public StateEntity() {
 	}
 
-	public int getState_id() {
-		return this.state_id;
+	public int getStateId() {
+		return stateId;
 	}
 
-	public void setState_id(int state_id) {
-		this.state_id = state_id;
+	public void setStateId(int stateId) {
+		this.stateId = stateId;
 	}
 
-	public String getState_Name() {
-		return this.state_Name;
+	public String getStateName() {
+		return stateName;
 	}
 
-	public void setState_Name(String state_Name) {
-		this.state_Name = state_Name;
+	public void setStateName(String stateName) {
+		this.stateName = stateName;
 	}
-
 }

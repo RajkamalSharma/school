@@ -1,4 +1,4 @@
-package com.ons.school.common.vo;
+package com.ons.school.web.application.vo;
 
 public class Customer {
 
@@ -7,12 +7,12 @@ public class Customer {
     private String customerAddress;
     private long customerAvgRevenuePerAnnum;
 
-    public Customer(){
+    public Customer() {
 
     }
 
-    public Customer(String customerId , String customerName ,
-                    String customerAddress , long customerAvgRevenuePerAnnum){
+    public Customer(String customerId, String customerName,
+                    String customerAddress, long customerAvgRevenuePerAnnum) {
         this.customerId = customerId;
         this.customerName = customerName;
         this.customerAddress = customerAddress;

@@ -21,8 +21,8 @@ import javax.persistence.TemporalType;
 @Entity
 @NamedQueries({
 
-@NamedQuery(name = "FETCH_FEES_TEMPLATE", query = "SELECT f FROM FeesTemplateEntity f WHERE f.month_Year >= :monthFirstDayAtZeroOClock "
-		+ "AND f.month_Year <= :monthAfterFirstDayAtZeroOClock  AND f.class_id = :classID AND f.monthly_Template = :isMonthlyTemplate")
+@NamedQuery(name = "FETCH_FEES_TEMPLATE", query = "SELECT f FROM FeesTemplateEntity f WHERE f.monthYear >= :monthFirstDayAtZeroOClock "
+		+ "AND f.monthYear <= :monthAfterFirstDayAtZeroOClock  AND f.classId = :classID AND f.monthlyTemplate = :isMonthlyTemplate")
 
 }) 
 
@@ -33,73 +33,72 @@ public class FeesTemplateEntity implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "Fees_Template_id")
-	private int fees_Template_id;
+	private int feesTemplateId;
 
 	@Column(name = "Class_id")
-	private int class_id;
+	private int classId;
 
 	@Column(name = "Fees_Component_Name")
-	private String fees_Component_Name;
+	private String feesComponentName;
 
 	@Column(name = "Fees_Component_Value")
-	private int fees_Component_Value;
+	private int feesComponentValue;
 
 	@Temporal(TemporalType.DATE)
 	@Column(name = "Month_Year")
-	private Date month_Year;
+	private Date monthYear;
 
 	@Column(name = "Monthly_Template")
-	private boolean monthly_Template;
+	private boolean monthlyTemplate;
 
 	public FeesTemplateEntity() {
 	}
 
-	public int getFees_Template_id() {
-		return this.fees_Template_id;
+	public int getFeesTemplateId() {
+		return feesTemplateId;
 	}
 
-	public void setFees_Template_id(int fees_Template_id) {
-		this.fees_Template_id = fees_Template_id;
+	public void setFeesTemplateId(int feesTemplateId) {
+		this.feesTemplateId = feesTemplateId;
 	}
 
-	public int getClass_id() {
-		return this.class_id;
+	public int getClassId() {
+		return classId;
 	}
 
-	public void setClass_id(int class_id) {
-		this.class_id = class_id;
+	public void setClassId(int classId) {
+		this.classId = classId;
 	}
 
-	public String getFees_Component_Name() {
-		return this.fees_Component_Name;
+	public String getFeesComponentName() {
+		return feesComponentName;
 	}
 
-	public void setFees_Component_Name(String fees_Component_Name) {
-		this.fees_Component_Name = fees_Component_Name;
+	public void setFeesComponentName(String feesComponentName) {
+		this.feesComponentName = feesComponentName;
 	}
 
-	public int getFees_Component_Value() {
-		return this.fees_Component_Value;
+	public int getFeesComponentValue() {
+		return feesComponentValue;
 	}
 
-	public void setFees_Component_Value(int fees_Component_Value) {
-		this.fees_Component_Value = fees_Component_Value;
+	public void setFeesComponentValue(int feesComponentValue) {
+		this.feesComponentValue = feesComponentValue;
 	}
 
-	public Date getMonth_Year() {
-		return this.month_Year;
+	public Date getMonthYear() {
+		return monthYear;
 	}
 
-	public void setMonth_Year(Date month_Year) {
-		this.month_Year = month_Year;
+	public void setMonthYear(Date monthYear) {
+		this.monthYear = monthYear;
 	}
 
-	public boolean getMonthly_Template() {
-		return this.monthly_Template;
+	public boolean isMonthlyTemplate() {
+		return monthlyTemplate;
 	}
 
-	public void setMonthly_Template(boolean monthly_Template) {
-		this.monthly_Template = monthly_Template;
+	public void setMonthlyTemplate(boolean monthlyTemplate) {
+		this.monthlyTemplate = monthlyTemplate;
 	}
-
 }

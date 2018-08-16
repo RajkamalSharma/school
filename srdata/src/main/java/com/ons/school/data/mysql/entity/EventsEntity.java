@@ -13,9 +13,9 @@ import java.util.Date;
 
 @NamedQueries({
 
-@NamedQuery(name = "FETCH_ALL_EVENTS", query = "SELECT I FROM EventsEntity I WHERE I.school_Id = :schoolId"),
-@NamedQuery(name = "FETCH_TODAYS_EVENTS", query = "SELECT I FROM EventsEntity I WHERE I.school_Id = :schoolId AND " +
-		" I.event_Start_date >= :todaysDate AND I.event_End_date < :tomorrowsDate and I.event_Type = :event_Type ")
+@NamedQuery(name = "FETCH_ALL_EVENTS", query = "SELECT I FROM EventsEntity I WHERE I.schoolId = :schoolId"),
+@NamedQuery(name = "FETCH_TODAYS_EVENTS", query = "SELECT I FROM EventsEntity I WHERE I.schoolId = :schoolId AND " +
+		" I.eventStartDate >= :todaysDate AND I.eventEndDate < :tomorrowsDate and I.eventType = :event_Type ")
 
 }) 
 
@@ -28,107 +28,106 @@ public class EventsEntity implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "Event_id")
-	private int event_id;
+	private int eventId;
 
 	@Column(name = "Event_Description")
-	private String event_Description;
+	private String eventDescription;
 
 	@Temporal(TemporalType.DATE)
 	@Column(name = "Event_End_date")
-	private Date event_End_date;
+	private Date eventEndDate;
 
 	@Column(name = "Event_Name")
-	private String event_Name;
+	private String eventName;
 
 	@Temporal(TemporalType.DATE)
 	@Column(name = "Event_Start_date")
-	private Date event_Start_date;
+	private Date eventStartDate;
 
 	@Column(name = "Event_Type")
-	private int event_Type;
+	private int eventType;
 
 	@Column(name = "Event_Value")
-	private int event_Value;
+	private int eventValue;
 
 	@Column(name = "Is_Paid_Event")
-	private boolean is_Paid_Event;
+	private boolean isPaidEvent;
 	
 	@Column(name = "School_Id")
-	private int school_Id;
+	private int schoolId;
 
 	public EventsEntity() {
 	}
 
-	public int getEvent_id() {
-		return this.event_id;
+	public int getEventId() {
+		return eventId;
 	}
 
-	public void setEvent_id(int event_id) {
-		this.event_id = event_id;
+	public void setEventId(int eventId) {
+		this.eventId = eventId;
 	}
 
-	public String getEvent_Description() {
-		return this.event_Description;
+	public String getEventDescription() {
+		return eventDescription;
 	}
 
-	public void setEvent_Description(String event_Description) {
-		this.event_Description = event_Description;
+	public void setEventDescription(String eventDescription) {
+		this.eventDescription = eventDescription;
 	}
 
-	public Date getEvent_End_date() {
-		return this.event_End_date;
+	public Date getEventEndDate() {
+		return eventEndDate;
 	}
 
-	public void setEvent_End_date(Date event_End_date) {
-		this.event_End_date = event_End_date;
+	public void setEventEndDate(Date eventEndDate) {
+		this.eventEndDate = eventEndDate;
 	}
 
-	public String getEvent_Name() {
-		return this.event_Name;
+	public String getEventName() {
+		return eventName;
 	}
 
-	public void setEvent_Name(String event_Name) {
-		this.event_Name = event_Name;
+	public void setEventName(String eventName) {
+		this.eventName = eventName;
 	}
 
-	public Date getEvent_Start_date() {
-		return this.event_Start_date;
+	public Date getEventStartDate() {
+		return eventStartDate;
 	}
 
-	public void setEvent_Start_date(Date event_Start_date) {
-		this.event_Start_date = event_Start_date;
+	public void setEventStartDate(Date eventStartDate) {
+		this.eventStartDate = eventStartDate;
 	}
 
-	public int getEvent_Type() {
-		return this.event_Type;
+	public int getEventType() {
+		return eventType;
 	}
 
-	public void setEvent_Type(int event_Type) {
-		this.event_Type = event_Type;
+	public void setEventType(int eventType) {
+		this.eventType = eventType;
 	}
 
-	public int getEvent_Value() {
-		return this.event_Value;
+	public int getEventValue() {
+		return eventValue;
 	}
 
-	public void setEvent_Value(int event_Value) {
-		this.event_Value = event_Value;
+	public void setEventValue(int eventValue) {
+		this.eventValue = eventValue;
 	}
 
-	public boolean getIs_Paid_Event() {
-		return this.is_Paid_Event;
+	public boolean isPaidEvent() {
+		return isPaidEvent;
 	}
 
-	public void setIs_Paid_Event(boolean is_Paid_Event) {
-		this.is_Paid_Event = is_Paid_Event;
+	public void setPaidEvent(boolean paidEvent) {
+		isPaidEvent = paidEvent;
 	}
 
-	public int getSchool_Id() {
-		return this.school_Id;
+	public int getSchoolId() {
+		return schoolId;
 	}
 
-	public void setSchool_Id(int school_Id) {
-		this.school_Id = school_Id;
+	public void setSchoolId(int schoolId) {
+		this.schoolId = schoolId;
 	}
-
 }

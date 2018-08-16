@@ -25,18 +25,18 @@ import javax.persistence.TemporalType;
 @Entity
 @NamedQueries({
 
-@NamedQuery(name = "FETCH_STUDENT_FEES_FOR_A_MONTH", query = "SELECT f from FeesEntity f where f.student_id= :student_id AND f.school_id= :school_id"
-		+ " AND f.class_id= :class_id AND f.fees_Month >= :monthFirstDayAtZeroOClock	AND f.fees_Month <= :monthAfterFirstDayAtZeroOClock  "),
+@NamedQuery(name = "FETCH_STUDENT_FEES_FOR_A_MONTH", query = "SELECT f from FeesEntity f where f.studentId= :student_id AND f.schoolId= :school_id"
+		+ " AND f.classId= :class_id AND f.feesMonth >= :monthFirstDayAtZeroOClock	AND f.feesMonth <= :monthAfterFirstDayAtZeroOClock  "),
 
 
-@NamedQuery(name = "FETCH_CLASS_FEES_STATUS_FOR_A_MONTH", query = "SELECT f from FeesEntity f where f.school_id= :school_id"
-		+ " AND f.class_id= :class_id AND f.fees_Month >= :monthFirstDayAtZeroOClock	AND f.fees_Month <= :monthAfterFirstDayAtZeroOClock " +
-		" AND f.fees_Paid = :fees_paid "),
+@NamedQuery(name = "FETCH_CLASS_FEES_STATUS_FOR_A_MONTH", query = "SELECT f from FeesEntity f where f.schoolId= :school_id"
+		+ " AND f.classId= :class_id AND f.feesMonth >= :monthFirstDayAtZeroOClock	AND f.feesMonth <= :monthAfterFirstDayAtZeroOClock " +
+		" AND f.feesPaid = :fees_paid "),
 		
 		
 
-@NamedQuery(name = "FETCH_SCHOOL_FEES_STATUS_FOR_A_MONTH", query = "SELECT f from FeesEntity f where f.school_id= :school_id"
-		+ " AND f.fees_Month >= :monthFirstDayAtZeroOClock	AND f.fees_Month <= :monthAfterFirstDayAtZeroOClock  AND f.fees_Paid = :fees_paid  ")	
+@NamedQuery(name = "FETCH_SCHOOL_FEES_STATUS_FOR_A_MONTH", query = "SELECT f from FeesEntity f where f.schoolId= :school_id"
+		+ " AND f.feesMonth >= :monthFirstDayAtZeroOClock	AND f.feesMonth <= :monthAfterFirstDayAtZeroOClock  AND f.feesPaid = :fees_paid  ")
 
 }
 )
@@ -49,29 +49,29 @@ public class FeesEntity implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "Fees_id")
-	private int fees_id;
+	private int feesId;
 
 	@Column(name = "Class_id")
-	private int class_id;
+	private int classId;
 
 	@Column(name = "Fees_Month")
 	@Temporal(TemporalType.DATE)
-	private Date fees_Month;
+	private Date feesMonth;
 
 	@Column(name = "Fees_Paid")
-	private boolean fees_Paid;
+	private boolean feesPaid;
 
 	@Column(name = "Previous_Fees_Paid")
-	private boolean previous_Fees_Paid;
+	private boolean previousFeesPaid;
 
 	@Column(name = "School_id")
-	private int school_id;
+	private int schoolId;
 
 	@Column(name = "Student_id")
-	private int student_id;
+	private int studentId;
 
 	@Column(name = "Total_Fees")
-	private int total_Fees;
+	private int totalFees;
 
 	// bi-directional many-to-one association to FeesDetail
 	@OneToMany(mappedBy = "feesEntity",fetch=FetchType.EAGER,cascade = { CascadeType.ALL,CascadeType.PERSIST,CascadeType.MERGE })
@@ -80,76 +80,75 @@ public class FeesEntity implements Serializable {
 	public FeesEntity() {
 	}
 
-	public int getFees_id() {
-		return this.fees_id;
+	public int getFeesId() {
+		return feesId;
 	}
 
-	public void setFees_id(int fees_id) {
-		this.fees_id = fees_id;
+	public void setFeesId(int feesId) {
+		this.feesId = feesId;
 	}
 
-	public int getClass_id() {
-		return this.class_id;
+	public int getClassId() {
+		return classId;
 	}
 
-	public void setClass_id(int class_id) {
-		this.class_id = class_id;
+	public void setClassId(int classId) {
+		this.classId = classId;
 	}
 
-	public Date getFees_Month() {
-		return this.fees_Month;
+	public Date getFeesMonth() {
+		return feesMonth;
 	}
 
-	public void setFees_Month(Date fees_Month) {
-		this.fees_Month = fees_Month;
+	public void setFeesMonth(Date feesMonth) {
+		this.feesMonth = feesMonth;
 	}
 
-	public boolean getFees_Paid() {
-		return this.fees_Paid;
+	public boolean isFeesPaid() {
+		return feesPaid;
 	}
 
-	public void setFees_Paid(boolean fees_Paid) {
-		this.fees_Paid = fees_Paid;
+	public void setFeesPaid(boolean feesPaid) {
+		this.feesPaid = feesPaid;
 	}
 
-	public boolean getPrevious_Fees_Paid() {
-		return this.previous_Fees_Paid;
+	public boolean isPreviousFeesPaid() {
+		return previousFeesPaid;
 	}
 
-	public void setPrevious_Fees_Paid(boolean previous_Fees_Paid) {
-		this.previous_Fees_Paid = previous_Fees_Paid;
+	public void setPreviousFeesPaid(boolean previousFeesPaid) {
+		this.previousFeesPaid = previousFeesPaid;
 	}
 
-	public int getSchool_id() {
-		return this.school_id;
+	public int getSchoolId() {
+		return schoolId;
 	}
 
-	public void setSchool_id(int school_id) {
-		this.school_id = school_id;
+	public void setSchoolId(int schoolId) {
+		this.schoolId = schoolId;
 	}
 
-	public int getStudent_id() {
-		return this.student_id;
+	public int getStudentId() {
+		return studentId;
 	}
 
-	public void setStudent_id(int student_id) {
-		this.student_id = student_id;
+	public void setStudentId(int studentId) {
+		this.studentId = studentId;
 	}
 
-	public int getTotal_Fees() {
-		return this.total_Fees;
+	public int getTotalFees() {
+		return totalFees;
 	}
 
-	public void setTotal_Fees(int total_Fees) {
-		this.total_Fees = total_Fees;
+	public void setTotalFees(int totalFees) {
+		this.totalFees = totalFees;
 	}
 
 	public Set<FeesDetail> getFeesDetails() {
-		return this.feesDetails;
+		return feesDetails;
 	}
 
 	public void setFeesDetails(Set<FeesDetail> feesDetails) {
 		this.feesDetails = feesDetails;
 	}
-
 }

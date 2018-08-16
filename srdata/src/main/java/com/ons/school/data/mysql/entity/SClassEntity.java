@@ -16,72 +16,75 @@ public class SClassEntity implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="Class_id")
-	private Long class_id;
+	private Long classId;
 
 	@Column(name="Class_Code")
-	private String class_Code;
+	private String classCode;
 
 	@Column(name="Class_Fees")
-	private int class_Fees;
+	private int classFees;
 
 	@Column(name="Class_Full_Name")
-	private String class_Full_Name;
+	private String fullClassName;
 
 	@Column(name="Class_Name")
-	private String class_Name;
+	private String className;
 
 	@Column(name="School_id")
-	private int school_id;
+	private int schoolId;
 
     public SClassEntity() {
     }
 
-	public Long getClass_id() {
-		return this.class_id;
+	public static long getSerialVersionUID() {
+		return serialVersionUID;
 	}
 
-	public void setClass_id(Long class_id) {
-		this.class_id = class_id;
+	public Long getClassId() {
+		return classId;
 	}
 
-	public String getClass_Code() {
-		return this.class_Code;
+	public void setClassId(Long classId) {
+		this.classId = classId;
 	}
 
-	public void setClass_Code(String class_Code) {
-		this.class_Code = class_Code;
+	public String getClassCode() {
+		return classCode;
 	}
 
-	public int getClass_Fees() {
-		return this.class_Fees;
+	public void setClassCode(String classCode) {
+		this.classCode = classCode;
 	}
 
-	public void setClass_Fees(int class_Fees) {
-		this.class_Fees = class_Fees;
+	public int getClassFees() {
+		return classFees;
 	}
 
-	public String getClass_Full_Name() {
-		return this.class_Full_Name;
+	public void setClassFees(int classFees) {
+		this.classFees = classFees;
 	}
 
-	public void setClass_Full_Name(String class_Full_Name) {
-		this.class_Full_Name = class_Full_Name;
+	public String getFullClassName() {
+		return fullClassName;
 	}
 
-	public String getClass_Name() {
-		return this.class_Name;
+	public void setFullClassName(String fullClassName) {
+		this.fullClassName = fullClassName;
 	}
 
-	public void setClass_Name(String class_Name) {
-		this.class_Name = class_Name;
+	public String getClassName() {
+		return className;
 	}
 
-	public int getSchool_id() {
-		return this.school_id;
+	public void setClassName(String className) {
+		this.className = className;
 	}
 
-	public void setSchool_id(int school_id) {
-		this.school_id = school_id;
+	public int getSchoolId() {
+		return schoolId;
 	}
 
+	public void setSchoolId(int schoolId) {
+		this.schoolId = schoolId;
+	}
 }

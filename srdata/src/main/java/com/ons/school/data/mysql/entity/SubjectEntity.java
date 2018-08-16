@@ -12,101 +12,95 @@ import javax.persistence.*;
 
 @NamedQueries({
 
-@NamedQuery(name = "FETCH_ALL_SUBJECTS_FOR_CLASS", query = "SELECT S FROM SubjectEntity S WHERE S.class_id = :classId ")
+@NamedQuery(name = "FETCH_ALL_SUBJECTS_FOR_CLASS", query = "SELECT S FROM SubjectEntity S WHERE S.classId = :classId ")
 
 }) 
 
 
-@Table(name="SubjectEntity")
+@Table(name="Subject")
 public class SubjectEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="Subject_id")
-	private int subject_id;
+	private int subjectId;
 
 	@Column(name="Class_id")
-	private int class_id;
+	private int classId;
 
 	@Column(name="Is_Practical_Subject")
-	private boolean is_Practical_Subject;
+	private boolean isPracticalSubject;
 
 	@Column(name="Subject_Code")
-	private String subject_Code;
+	private String subjectCode;
 
 	@Column(name="Subject_Name")
-	private String subject_Name;
+	private String subjectName;
 
 	@Column(name="Period_Frequency_Per_Week")
-	private int period_Frequency_Per_Week ;
+	private int periodFrequencyPerWeek ;
 	
 	@Column(name="Period_Duration")
-	private int period_Duration ;
+	private int periodDuration ;
 	
 	
     public SubjectEntity() {
     }
 
-	public int getSubject_id() {
-		return this.subject_id;
+	public int getSubjectId() {
+		return subjectId;
 	}
 
-	public void setSubject_id(int subject_id) {
-		this.subject_id = subject_id;
+	public void setSubjectId(int subjectId) {
+		this.subjectId = subjectId;
 	}
 
-	public int getClass_id() {
-		return this.class_id;
+	public int getClassId() {
+		return classId;
 	}
 
-	public void setClass_id(int class_id) {
-		this.class_id = class_id;
+	public void setClassId(int classId) {
+		this.classId = classId;
 	}
 
-
-	public boolean is_Practical_Subject() {
-		return is_Practical_Subject;
+	public boolean isPracticalSubject() {
+		return isPracticalSubject;
 	}
 
-	public void setIs_Practical_Subject(boolean is_Practical_Subject) {
-		this.is_Practical_Subject = is_Practical_Subject;
+	public void setPracticalSubject(boolean practicalSubject) {
+		isPracticalSubject = practicalSubject;
 	}
 
-	
-	public String getSubject_Code() {
-		return subject_Code;
+	public String getSubjectCode() {
+		return subjectCode;
 	}
 
-	public void setSubject_Code(String subject_Code) {
-		this.subject_Code = subject_Code;
+	public void setSubjectCode(String subjectCode) {
+		this.subjectCode = subjectCode;
 	}
 
-	public String getSubject_Name() {
-		return this.subject_Name;
+	public String getSubjectName() {
+		return subjectName;
 	}
 
-	public void setSubject_Name(String subject_Name) {
-		this.subject_Name = subject_Name;
+	public void setSubjectName(String subjectName) {
+		this.subjectName = subjectName;
 	}
 
-	public int getPeriod_Frequency_Per_Week() {
-		return period_Frequency_Per_Week;
+	public int getPeriodFrequencyPerWeek() {
+		return periodFrequencyPerWeek;
 	}
 
-	public void setPeriod_Frequency_Per_Week(int period_Frequency_Per_Week) {
-		this.period_Frequency_Per_Week = period_Frequency_Per_Week;
+	public void setPeriodFrequencyPerWeek(int periodFrequencyPerWeek) {
+		this.periodFrequencyPerWeek = periodFrequencyPerWeek;
 	}
 
-	public int getPeriod_Duration() {
-		return period_Duration;
+	public int getPeriodDuration() {
+		return periodDuration;
 	}
 
-	public void setPeriod_Duration(int period_Duration) {
-		this.period_Duration = period_Duration;
+	public void setPeriodDuration(int periodDuration) {
+		this.periodDuration = periodDuration;
 	}
-	
-	
-	
-
 }

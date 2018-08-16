@@ -16,9 +16,9 @@ import java.util.Set;
 
 @NamedQueries({
 
-@NamedQuery(name = "FETCH_ALL_ISSUES", query = "SELECT I FROM IssueEntity I WHERE I.school_id = :schoolId"),
-@NamedQuery(name = "FETCH_TODAYS_ISSUES", query = "SELECT I FROM IssueEntity I WHERE I.school_id = :schoolId AND " +
-		" I.active_Start_Date >= :todaysDate AND I.active_Start_Date < :tomorrowsDate ")
+@NamedQuery(name = "FETCH_ALL_ISSUES", query = "SELECT I FROM IssueEntity I WHERE I.schoolId = :schoolId"),
+@NamedQuery(name = "FETCH_TODAYS_ISSUES", query = "SELECT I FROM IssueEntity I WHERE I.schoolId = :schoolId AND " +
+		" I.activeStartDate >= :todaysDate AND I.activeStartDate < :tomorrowsDate ")
 
 }) 
 
@@ -33,23 +33,23 @@ public class IssueEntity implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name = "Issue_id")
-	private int issue_id;
+	private int issueId;
 
 	@Column(name = "Active_Inactive_Status")
-	private boolean active_Inactive_Status;
+	private boolean activeInactiveStatus;
 
 	@Column(name = "Active_Start_Date")
     @Temporal( TemporalType.DATE)
-	private Date active_Start_Date;
+	private Date activeStartDate;
 
 	@Column(name = "Created_Timestamp")
-	private Timestamp created_Timestamp;
+	private Timestamp createdTimestamp;
 
 	@Column(name = "Issue_Text")
-	private String issue_Text;
+	private String issueText;
 
 	@Column(name = "School_id")
-	private int school_id;
+	private int schoolId;
 	
 	@OneToMany(mappedBy = "issueEntity",fetch=FetchType.EAGER,cascade = { CascadeType.ALL,CascadeType.PERSIST,CascadeType.MERGE })
 	private Set<IdeaEntity> ideaEntities;
@@ -57,52 +57,52 @@ public class IssueEntity implements Serializable {
     public IssueEntity() {
     }
 
-	public int getIssue_id() {
-		return this.issue_id;
+	public int getIssueId() {
+		return issueId;
 	}
 
-	public void setIssue_id(int issue_id) {
-		this.issue_id = issue_id;
+	public void setIssueId(int issueId) {
+		this.issueId = issueId;
 	}
 
-	public boolean getActive_Inactive_Status() {
-		return this.active_Inactive_Status;
+	public boolean isActiveInactiveStatus() {
+		return activeInactiveStatus;
 	}
 
-	public void setActive_Inactive_Status(boolean active_Inactive_Status) {
-		this.active_Inactive_Status = active_Inactive_Status;
+	public void setActiveInactiveStatus(boolean activeInactiveStatus) {
+		this.activeInactiveStatus = activeInactiveStatus;
 	}
 
-	public Date getActive_Start_Date() {
-		return this.active_Start_Date;
+	public Date getActiveStartDate() {
+		return activeStartDate;
 	}
 
-	public void setActive_Start_Date(Date active_Start_Date) {
-		this.active_Start_Date = active_Start_Date;
+	public void setActiveStartDate(Date activeStartDate) {
+		this.activeStartDate = activeStartDate;
 	}
 
-	public Timestamp getCreated_Timestamp() {
-		return this.created_Timestamp;
+	public Timestamp getCreatedTimestamp() {
+		return createdTimestamp;
 	}
 
-	public void setCreated_Timestamp(Timestamp created_Timestamp) {
-		this.created_Timestamp = created_Timestamp;
+	public void setCreatedTimestamp(Timestamp createdTimestamp) {
+		this.createdTimestamp = createdTimestamp;
 	}
 
-	public String getIssue_Text() {
-		return this.issue_Text;
+	public String getIssueText() {
+		return issueText;
 	}
 
-	public void setIssue_Text(String issue_Text) {
-		this.issue_Text = issue_Text;
+	public void setIssueText(String issueText) {
+		this.issueText = issueText;
 	}
 
-	public int getSchool_id() {
-		return this.school_id;
+	public int getSchoolId() {
+		return schoolId;
 	}
 
-	public void setSchool_id(int school_id) {
-		this.school_id = school_id;
+	public void setSchoolId(int schoolId) {
+		this.schoolId = schoolId;
 	}
 
 	public Set<IdeaEntity> getIdeaEntities() {
@@ -112,7 +112,4 @@ public class IssueEntity implements Serializable {
 	public void setIdeaEntities(Set<IdeaEntity> ideaEntities) {
 		this.ideaEntities = ideaEntities;
 	}
-
-	
-	
 }

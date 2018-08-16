@@ -25,13 +25,13 @@ public class FeesDetail implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name = "Fees_Details_id")
-	private int fees_Details_id;
+	private int feesDetailsId;
 
 	@Column(name = "Event_Amount")
-	private int event_Amount;
+	private int eventAmount;
 
 	@Column(name = "Event_Description")
-	private String event_Description;
+	private String eventDescription;
 
 	//bi-directional many-to-one association to Fee
     @ManyToOne(fetch = FetchType.EAGER )
@@ -41,36 +41,35 @@ public class FeesDetail implements Serializable {
     public FeesDetail() {
     }
 
-	public int getFees_Details_id() {
-		return this.fees_Details_id;
+	public int getFeesDetailsId() {
+		return feesDetailsId;
 	}
 
-	public void setFees_Details_id(int fees_Details_id) {
-		this.fees_Details_id = fees_Details_id;
+	public void setFeesDetailsId(int feesDetailsId) {
+		this.feesDetailsId = feesDetailsId;
 	}
 
-	public int getEvent_Amount() {
-		return this.event_Amount;
+	public int getEventAmount() {
+		return eventAmount;
 	}
 
-	public void setEvent_Amount(int event_Amount) {
-		this.event_Amount = event_Amount;
+	public void setEventAmount(int eventAmount) {
+		this.eventAmount = eventAmount;
 	}
 
-	public String getEvent_Description() {
-		return this.event_Description;
+	public String getEventDescription() {
+		return eventDescription;
 	}
 
-	public void setEvent_Description(String event_Description) {
-		this.event_Description = event_Description;
+	public void setEventDescription(String eventDescription) {
+		this.eventDescription = eventDescription;
 	}
 
 	public FeesEntity getFeesEntity() {
-		return this.feesEntity;
+		return feesEntity;
 	}
 
 	public void setFeesEntity(FeesEntity feesEntity) {
 		this.feesEntity = feesEntity;
 	}
-	
 }

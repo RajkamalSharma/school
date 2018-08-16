@@ -1,7 +1,7 @@
 package com.ons.school.web.application.controllers;
 
-import com.ons.school.common.vo.Customer;
 import com.ons.school.web.application.service.CustomerService;
+import com.ons.school.web.application.vo.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

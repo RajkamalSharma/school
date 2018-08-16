@@ -12,7 +12,7 @@ import javax.persistence.*;
 
 @NamedQueries({
 	
-@NamedQuery(name = "FETCH_ALL_ROOMS_IN_SCHOOL", query = "SELECT R from RoomEntity R where R.school_id = :schoolId ")
+@NamedQuery(name = "FETCH_ALL_ROOMS_IN_SCHOOL", query = "SELECT R from RoomEntity R where R.schoolId = :schoolId ")
 
 }) 
 
@@ -22,77 +22,73 @@ public class RoomEntity implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name = "Room_id")
-	private int room_id;
+	@Column(name = "RoomId")
+	private int roomId;
 
 	@Column(name = "Is_Laboratory")
-	private boolean is_Laboratory;
+	private boolean isLaboratory;
 
 	@Column(name = "Is_Projector_Istalled")
-	private boolean is_Projector_Istalled;
+	private boolean isProjectorIstalled;
 
 	@Column(name = "Room_Number")
-	private String room_Number;
+	private String roomNumber;
 
 	@Column(name = "Room_Occupancy")
-	private int room_Occupancy;
+	private int roomOccupancy;
 	
 	
 	@Column(name="School_id")
-	private int school_id;
+	private int schoolId;
 
     public RoomEntity() {
     }
 
-	public int getRoom_id() {
-		return this.room_id;
+	public int getRoomId() {
+		return roomId;
 	}
 
-	public void setRoom_id(int room_id) {
-		this.room_id = room_id;
+	public void setRoomId(int roomId) {
+		this.roomId = roomId;
 	}
 
-	
-	public boolean isIs_Laboratory() {
-		return is_Laboratory;
+	public boolean isLaboratory() {
+		return isLaboratory;
 	}
 
-	public void setIs_Laboratory(boolean is_Laboratory) {
-		this.is_Laboratory = is_Laboratory;
+	public void setLaboratory(boolean laboratory) {
+		isLaboratory = laboratory;
 	}
 
-	public boolean isIs_Projector_Istalled() {
-		return is_Projector_Istalled;
+	public boolean isProjectorIstalled() {
+		return isProjectorIstalled;
 	}
 
-	public void setIs_Projector_Istalled(boolean is_Projector_Istalled) {
-		this.is_Projector_Istalled = is_Projector_Istalled;
+	public void setProjectorIstalled(boolean projectorIstalled) {
+		isProjectorIstalled = projectorIstalled;
 	}
 
-	public String getRoom_Number() {
-		return this.room_Number;
+	public String getRoomNumber() {
+		return roomNumber;
 	}
 
-	public void setRoom_Number(String room_Number) {
-		this.room_Number = room_Number;
+	public void setRoomNumber(String roomNumber) {
+		this.roomNumber = roomNumber;
 	}
 
-	public int getRoom_Occupancy() {
-		return this.room_Occupancy;
+	public int getRoomOccupancy() {
+		return roomOccupancy;
 	}
 
-	public void setRoom_Occupancy(int room_Occupancy) {
-		this.room_Occupancy = room_Occupancy;
+	public void setRoomOccupancy(int roomOccupancy) {
+		this.roomOccupancy = roomOccupancy;
 	}
 
-	public int getSchool_id() {
-		return school_id;
+	public int getSchoolId() {
+		return schoolId;
 	}
 
-	public void setSchool_id(int school_id) {
-		this.school_id = school_id;
+	public void setSchoolId(int schoolId) {
+		this.schoolId = schoolId;
 	}
-	
-	
-
 }

@@ -1,10 +1,9 @@
 package com.ons.school.web.application.controllers;
 
-
-import com.ons.school.common.vo.Customer;
 import com.ons.school.data.couchbase.repository.CustomerSBRepository;
 import com.ons.school.web.application.SrwebApplication;
 import com.ons.school.web.application.service.CustomerService;
+import com.ons.school.web.application.vo.Customer;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;

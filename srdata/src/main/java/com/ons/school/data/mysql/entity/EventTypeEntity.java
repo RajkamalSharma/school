@@ -20,27 +20,26 @@ public class EventTypeEntity implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int event_Type_id;
+	private int eventTypeId;
 
-	private String event_Type;
+	private String eventType;
 
 	public EventTypeEntity() {
 	}
 
-	public int getEvent_Type_id() {
-		return this.event_Type_id;
+	public int getEventTypeId() {
+		return eventTypeId;
 	}
 
-	public void setEvent_Type_id(int event_Type_id) {
-		this.event_Type_id = event_Type_id;
+	public void setEventTypeId(int eventTypeId) {
+		this.eventTypeId = eventTypeId;
 	}
 
-	public String getEvent_Type() {
-		return this.event_Type;
+	public String getEventType() {
+		return eventType;
 	}
 
-	public void setEvent_Type(String event_Type) {
-		this.event_Type = event_Type;
+	public void setEventType(String eventType) {
+		this.eventType = eventType;
 	}
-
 }

@@ -11,7 +11,7 @@ import javax.persistence.*;
 
 @NamedQueries({
 
-@NamedQuery(name = "FETCH_USER_DETAILS", query = "SELECT o FROM UserEntity o WHERE o.school_id = :schoolId and o.user_Id = :userId " )
+@NamedQuery(name = "FETCH_USER_DETAILS", query = "SELECT o FROM UserEntity o WHERE o.schoolId = :schoolId and o.userId = :userId " )
 		
 }) 
 
@@ -23,105 +23,104 @@ public class UserEntity implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "User_Seq_Id")
-	private int user_Seq_Id;
+	private int userSeqId;
 
 	@Column(name = "Role_Code")
-	private String role_Code;
+	private String roleCode;
 
 	@Column(name = "School_id")
-	private int school_id;
+	private int schoolId;
 
 	@Column(name = "User_First_name")
-	private String user_First_name;
+	private String firstName;
 
 	@Column(name = "User_Id")
-	private String user_Id;
+	private String userId;
 
 	@Column(name = "User_Last_Name")
-	private String user_Last_Name;
+	private String lastName;
 
 	@Column(name = "User_Middle_name")
-	private String user_Middle_name;
+	private String middleName;
 
 	@Column(name = "User_Password")
-	private String user_Password;
+	private String userPassword;
 
 	@Column(name = "User_Status")
-	private String user_Status;
+	private String userStatus;
 
 	public UserEntity() {
 	}
 
-	public int getUser_Seq_Id() {
-		return this.user_Seq_Id;
+	public int getUserSeqId() {
+		return userSeqId;
 	}
 
-	public void setUser_Seq_Id(int user_Seq_Id) {
-		this.user_Seq_Id = user_Seq_Id;
+	public void setUserSeqId(int userSeqId) {
+		this.userSeqId = userSeqId;
 	}
 
-	public String getRole_Code() {
-		return this.role_Code;
+	public String getRoleCode() {
+		return roleCode;
 	}
 
-	public void setRole_Code(String role_Code) {
-		this.role_Code = role_Code;
+	public void setRoleCode(String roleCode) {
+		this.roleCode = roleCode;
 	}
 
-	public int getSchool_id() {
-		return this.school_id;
+	public int getSchoolId() {
+		return schoolId;
 	}
 
-	public void setSchool_id(int school_id) {
-		this.school_id = school_id;
+	public void setSchoolId(int schoolId) {
+		this.schoolId = schoolId;
 	}
 
-	public String getUser_First_name() {
-		return this.user_First_name;
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setUser_First_name(String user_First_name) {
-		this.user_First_name = user_First_name;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
-	public String getUser_Id() {
-		return this.user_Id;
+	public String getUserId() {
+		return userId;
 	}
 
-	public void setUser_Id(String user_Id) {
-		this.user_Id = user_Id;
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
 
-	public String getUser_Last_Name() {
-		return this.user_Last_Name;
+	public String getUserPassword() {
+		return userPassword;
 	}
 
-	public void setUser_Last_Name(String user_Last_Name) {
-		this.user_Last_Name = user_Last_Name;
+	public void setUserPassword(String userPassword) {
+		this.userPassword = userPassword;
 	}
 
-	public String getUser_Middle_name() {
-		return this.user_Middle_name;
+	public String getUserStatus() {
+		return userStatus;
 	}
 
-	public void setUser_Middle_name(String user_Middle_name) {
-		this.user_Middle_name = user_Middle_name;
+	public void setUserStatus(String userStatus) {
+		this.userStatus = userStatus;
 	}
 
-	public String getUser_Password() {
-		return this.user_Password;
+	public String getLastName() {
+		return lastName;
 	}
 
-	public void setUser_Password(String user_Password) {
-		this.user_Password = user_Password;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
-	public String getUser_Status() {
-		return this.user_Status;
+	public String getMiddleName() {
+		return middleName;
 	}
 
-	public void setUser_Status(String user_Status) {
-		this.user_Status = user_Status;
+	public void setMiddleName(String middleName) {
+		this.middleName = middleName;
 	}
-
 }

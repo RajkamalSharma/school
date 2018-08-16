@@ -1,4 +1,4 @@
-package com.ons.school.common.vo;
+package com.ons.school.web.application.vo;
 
 import java.sql.Timestamp;
 

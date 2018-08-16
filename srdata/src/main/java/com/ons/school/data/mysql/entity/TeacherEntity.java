@@ -17,161 +17,160 @@ public class TeacherEntity implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="Teacher_id")
-	private int teacher_id;
+	private int teacherId;
 
 	@Column(name="Emergency_Contact_number")
-	private String emergency_Contact_number;
+	private String emergencyContactNumber;
 
 	@Column(name="School_id")
-	private int school_id;
+	private int schoolId;
 
 	@Column(name="Teacher_Address_Line_1")
-	private String teacher_Address_Line_1;
+	private String teacherAddressLine1;
 
 	@Column(name="Teacher_Address_Line_2")
-	private String teacher_Address_Line_2;
+	private String teacherAddressLine_2;
 
 	@Column(name="Teacher_City")
-	private String teacher_City;
+	private String teacherCity;
 
 	@Column(name="Teacher_Contact_Number")
-	private String teacher_Contact_Number;
+	private String teacherContactNumber;
 
     @Temporal( TemporalType.DATE)
     @Column(name="Teacher_Date_Of_Birth")
-	private Date teacher_Date_Of_Birth;
+	private Date teacherDateOfBirth;
 
     @Column(name="Teacher_Educational_Background")
-	private String teacher_Educational_Background;
+	private String teacherEducationalBackground;
 
     @Column(name="Teacher_Name")
-	private String teacher_Name;
+	private String teacherName;
 
     @Column(name="Teacher_Postal_COde")
-	private String teacher_Postal_COde;
+	private String teacherPostalCOde;
 
     @Column(name="Teacher_Professional_Background")
-	private String teacher_Professional_Background;
+	private String teacherProfessionalBackground;
 
     @Column(name="Teacher_State")
-	private String teacher_State;
+	private String teacherState;
 
     @Column(name="Teacher_UID")
-	private String teacher_UID;
+	private String teacherUID;
 
     public TeacherEntity() {
     }
 
-	public int getTeacher_id() {
-		return this.teacher_id;
+	public int getTeacherId() {
+		return teacherId;
 	}
 
-	public void setTeacher_id(int teacher_id) {
-		this.teacher_id = teacher_id;
+	public void setTeacherId(int teacherId) {
+		this.teacherId = teacherId;
 	}
 
-	public String getEmergency_Contact_number() {
-		return this.emergency_Contact_number;
+	public String getEmergencyContactNumber() {
+		return emergencyContactNumber;
 	}
 
-	public void setEmergency_Contact_number(String emergency_Contact_number) {
-		this.emergency_Contact_number = emergency_Contact_number;
+	public void setEmergencyContactNumber(String emergencyContactNumber) {
+		this.emergencyContactNumber = emergencyContactNumber;
 	}
 
-	public int getSchool_id() {
-		return this.school_id;
+	public int getSchoolId() {
+		return schoolId;
 	}
 
-	public void setSchool_id(int school_id) {
-		this.school_id = school_id;
+	public void setSchoolId(int schoolId) {
+		this.schoolId = schoolId;
 	}
 
-	public String getTeacher_Address_Line_1() {
-		return this.teacher_Address_Line_1;
+	public String getTeacherAddressLine1() {
+		return teacherAddressLine1;
 	}
 
-	public void setTeacher_Address_Line_1(String teacher_Address_Line_1) {
-		this.teacher_Address_Line_1 = teacher_Address_Line_1;
+	public void setTeacherAddressLine1(String teacherAddressLine1) {
+		this.teacherAddressLine1 = teacherAddressLine1;
 	}
 
-	public String getTeacher_Address_Line_2() {
-		return this.teacher_Address_Line_2;
+	public String getTeacherAddressLine_2() {
+		return teacherAddressLine_2;
 	}
 
-	public void setTeacher_Address_Line_2(String teacher_Address_Line_2) {
-		this.teacher_Address_Line_2 = teacher_Address_Line_2;
+	public void setTeacherAddressLine_2(String teacherAddressLine_2) {
+		this.teacherAddressLine_2 = teacherAddressLine_2;
 	}
 
-	public String getTeacher_City() {
-		return this.teacher_City;
+	public String getTeacherCity() {
+		return teacherCity;
 	}
 
-	public void setTeacher_City(String teacher_City) {
-		this.teacher_City = teacher_City;
+	public void setTeacherCity(String teacherCity) {
+		this.teacherCity = teacherCity;
 	}
 
-	public String getTeacher_Contact_Number() {
-		return this.teacher_Contact_Number;
+	public String getTeacherContactNumber() {
+		return teacherContactNumber;
 	}
 
-	public void setTeacher_Contact_Number(String teacher_Contact_Number) {
-		this.teacher_Contact_Number = teacher_Contact_Number;
+	public void setTeacherContactNumber(String teacherContactNumber) {
+		this.teacherContactNumber = teacherContactNumber;
 	}
 
-	public Date getTeacher_Date_Of_Birth() {
-		return this.teacher_Date_Of_Birth;
+	public Date getTeacherDateOfBirth() {
+		return teacherDateOfBirth;
 	}
 
-	public void setTeacher_Date_Of_Birth(Date teacher_Date_Of_Birth) {
-		this.teacher_Date_Of_Birth = teacher_Date_Of_Birth;
+	public void setTeacherDateOfBirth(Date teacherDateOfBirth) {
+		this.teacherDateOfBirth = teacherDateOfBirth;
 	}
 
-	public String getTeacher_Educational_Background() {
-		return this.teacher_Educational_Background;
+	public String getTeacherEducationalBackground() {
+		return teacherEducationalBackground;
 	}
 
-	public void setTeacher_Educational_Background(String teacher_Educational_Background) {
-		this.teacher_Educational_Background = teacher_Educational_Background;
+	public void setTeacherEducationalBackground(String teacherEducationalBackground) {
+		this.teacherEducationalBackground = teacherEducationalBackground;
 	}
 
-	public String getTeacher_Name() {
-		return this.teacher_Name;
+	public String getTeacherName() {
+		return teacherName;
 	}
 
-	public void setTeacher_Name(String teacher_Name) {
-		this.teacher_Name = teacher_Name;
+	public void setTeacherName(String teacherName) {
+		this.teacherName = teacherName;
 	}
 
-	public String getTeacher_Postal_COde() {
-		return this.teacher_Postal_COde;
+	public String getTeacherPostalCOde() {
+		return teacherPostalCOde;
 	}
 
-	public void setTeacher_Postal_COde(String teacher_Postal_COde) {
-		this.teacher_Postal_COde = teacher_Postal_COde;
+	public void setTeacherPostalCOde(String teacherPostalCOde) {
+		this.teacherPostalCOde = teacherPostalCOde;
 	}
 
-	public String getTeacher_Professional_Background() {
-		return this.teacher_Professional_Background;
+	public String getTeacherProfessionalBackground() {
+		return teacherProfessionalBackground;
 	}
 
-	public void setTeacher_Professional_Background(String teacher_Professional_Background) {
-		this.teacher_Professional_Background = teacher_Professional_Background;
+	public void setTeacherProfessionalBackground(String teacherProfessionalBackground) {
+		this.teacherProfessionalBackground = teacherProfessionalBackground;
 	}
 
-	public String getTeacher_State() {
-		return this.teacher_State;
+	public String getTeacherState() {
+		return teacherState;
 	}
 
-	public void setTeacher_State(String teacher_State) {
-		this.teacher_State = teacher_State;
+	public void setTeacherState(String teacherState) {
+		this.teacherState = teacherState;
 	}
 
-	public String getTeacher_UID() {
-		return this.teacher_UID;
+	public String getTeacherUID() {
+		return teacherUID;
 	}
 
-	public void setTeacher_UID(String teacher_UID) {
-		this.teacher_UID = teacher_UID;
+	public void setTeacherUID(String teacherUID) {
+		this.teacherUID = teacherUID;
 	}
-
 }

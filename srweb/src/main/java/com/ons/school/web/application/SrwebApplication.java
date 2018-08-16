@@ -4,10 +4,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.couchbase.repository.config.EnableCouchbaseRepositories;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication
 @ComponentScan({"com.ons.school.web","com.ons.school.data"})
 @EnableCouchbaseRepositories(basePackages="com.ons.school.data.couchbase.repository")
+@EnableTransactionManagement
 //@EntityScan(basePackages="com.example.srdata.entity")
 public class SrwebApplication {
 

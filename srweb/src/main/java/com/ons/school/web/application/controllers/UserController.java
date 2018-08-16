@@ -1,8 +1,8 @@
 package com.ons.school.web.application.controllers;
 
-import com.ons.school.common.vo.User;
 import com.ons.school.web.application.exception.user.UsernotfoundException;
 import com.ons.school.web.application.service.UserService;
+import com.ons.school.web.application.vo.User;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

@@ -1,8 +1,9 @@
 package com.ons.school.web.application.service;
 
-import com.ons.school.common.vo.User;
 import com.ons.school.data.mysql.entity.UserEntity;
 import com.ons.school.data.mysql.repository.UserRepository;
+import com.ons.school.web.application.vo.User;
+import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
@@ -15,6 +16,9 @@ public class UserServiceImpl implements UserService {
 
     @Inject
     private UserRepository userRepository;
+
+    @Inject
+    private ModelMapper modelMapper;
 
     @Override
     public List<User> getAllUser() {
@@ -29,30 +33,22 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Optional<User> getUser(int id) {
-        return copyUserEntityToVoOptional( this.userRepository.findById(id) );
+        return copyUserEntityToVoOptional(this.userRepository.findById(id));
     }
 
-    private Optional<User> copyUserEntityToVoOptional(Optional<UserEntity> userEntity){
+    private Optional<User> copyUserEntityToVoOptional(Optional<UserEntity> userEntity) {
 
-        if(userEntity.isPresent()){
-
+        if (userEntity.isPresent()) {
             return Optional.of(copyUserEntityToVo(userEntity.get()));
         }
-
         return Optional.empty();
+
     }
 
-    private User copyUserEntityToVo(UserEntity user ){
+    private User copyUserEntityToVo(UserEntity user) {
 
         User userVo = new User();
-
-        userVo.setFirstname(user.getUser_First_name());
-        userVo.setLastname(user.getUser_Last_Name());
-        userVo.setMiddleName(user.getUser_Middle_name());
-        userVo.setRoleCode(user.getRole_Code());
-        userVo.setUserId(user.getUser_Id());
-        userVo.setUserStatus(user.getUser_Status());
-
+        modelMapper.map(user, userVo);
         return userVo;
     }
 }

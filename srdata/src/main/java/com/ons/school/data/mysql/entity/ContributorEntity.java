@@ -12,15 +12,15 @@ import java.sql.Timestamp;
 
 @NamedQueries({
 
-@NamedQuery(name = "FETCH_ALL_CONTRIBUTORS_LIST", query = "SELECT C FROM ContributorEntity C WHERE C.school_id = :schoolId"),
-@NamedQuery(name = "FETCH_ACTIVE_INACTIVE_CONTRIBUTORS_LIST", query = "SELECT C FROM ContributorEntity C WHERE C.school_id = :schoolId " +
-		"and  C.email_Address_Valid=:email_Address_Valid AND C.unsubscribed = :unsubscribed "),
-@NamedQuery(name = "FETCH_UNSUBSCRIBED_CONTRIBUTORS_LIST", query = "SELECT C FROM ContributorEntity C WHERE C.school_id = :schoolId " +
+@NamedQuery(name = "FETCH_ALL_CONTRIBUTORS_LIST", query = "SELECT C FROM ContributorEntity C WHERE C.schoolId = :schoolId"),
+@NamedQuery(name = "FETCH_ACTIVE_INACTIVE_CONTRIBUTORS_LIST", query = "SELECT C FROM ContributorEntity C WHERE C.schoolId = :schoolId " +
+		"and  C.emailAddressValid=:email_Address_Valid AND C.unsubscribed = :unsubscribed "),
+@NamedQuery(name = "FETCH_UNSUBSCRIBED_CONTRIBUTORS_LIST", query = "SELECT C FROM ContributorEntity C WHERE C.schoolId = :schoolId " +
 				"and C.unsubscribed = :unsubscribed "),
-@NamedQuery(name = "FETCH_VALID_CONTRIBUTORS_LIST", query = "SELECT C FROM ContributorEntity C WHERE C.school_id = :schoolId " +
-						"and C.email_Address_Valid=:email_Address_Valid "),
-@NamedQuery(name = "FETCH_CONTRIBUTOR_ON_EMAILID", query = "SELECT C FROM ContributorEntity C WHERE C.school_id = :schoolId " +
-								"and C.email_id = :email_id ")
+@NamedQuery(name = "FETCH_VALID_CONTRIBUTORS_LIST", query = "SELECT C FROM ContributorEntity C WHERE C.schoolId = :schoolId " +
+						"and C.emailAddressValid=:email_Address_Valid "),
+@NamedQuery(name = "FETCH_CONTRIBUTOR_ON_EMAILID", query = "SELECT C FROM ContributorEntity C WHERE C.schoolId = :schoolId " +
+								"and C.emailId = :email_id ")
 						
 }) 
 
@@ -32,158 +32,155 @@ public class ContributorEntity implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "Contributor_id")
-	private int contributor_id;
+	private int contributorId;
 
 	@Column(name = "Address_1")
-	private String address_1;
+	private String address1;
 
 	@Column(name = "Address_2")
-	private String address_2;
+	private String address2;
 
 	@Column(name = "City")
 	private String city;
 
 	@Column(name = "Contact_Number")
-	private String contact_Number;
+	private String contactNumber;
 
 	@Column(name = "Contributor_Name")
-	private String contributor_Name;
+	private String contributorName;
 
 	@Column(name = "Country")
 	private String country;
 
 	@Column(name = "Email_Address_Valid")
-	private boolean email_Address_Valid;
+	private boolean emailAddressValid;
 
 	@Column(name = "Email_id")
-	private String email_id;
+	private String emailId;
 
 	@Column(name = "Last_Response_Time")
-	private Timestamp last_Response_Time;
+	private Timestamp lastResponseTime;
 
 	@Column(name = "Pincode")
 	private String pincode;
 
 	@Column(name = "School_id")
-	private int school_id;
+	private int schoolId;
 
 	@Column(name = "State_id")
-	private String state_id;
+	private String stateId;
 
 	@Column(name = "Unsubscribed")
 	private boolean unsubscribed;
 
 	@Column(name = "Website_Url")
-	private String website_Url;
+	private String websiteUrl;
 
 	public ContributorEntity() {
 	}
 
-	public int getContributor_id() {
-		return this.contributor_id;
+	public int getContributorId() {
+		return contributorId;
 	}
 
-	public void setContributor_id(int contributor_id) {
-		this.contributor_id = contributor_id;
+	public void setContributorId(int contributorId) {
+		this.contributorId = contributorId;
 	}
 
-	public String getAddress_1() {
-		return this.address_1;
+	public String getAddress1() {
+		return address1;
 	}
 
-	public void setAddress_1(String address_1) {
-		this.address_1 = address_1;
+	public void setAddress1(String address1) {
+		this.address1 = address1;
 	}
 
-	public String getAddress_2() {
-		return this.address_2;
+	public String getAddress2() {
+		return address2;
 	}
 
-	public void setAddress_2(String address_2) {
-		this.address_2 = address_2;
+	public void setAddress2(String address2) {
+		this.address2 = address2;
 	}
 
 	public String getCity() {
-		return this.city;
+		return city;
 	}
 
 	public void setCity(String city) {
 		this.city = city;
 	}
 
-	public String getContact_Number() {
-		return this.contact_Number;
+	public String getContactNumber() {
+		return contactNumber;
 	}
 
-	public void setContact_Number(String contact_Number) {
-		this.contact_Number = contact_Number;
+	public void setContactNumber(String contactNumber) {
+		this.contactNumber = contactNumber;
 	}
 
-	public String getContributor_Name() {
-		return this.contributor_Name;
+	public String getContributorName() {
+		return contributorName;
 	}
 
-	public void setContributor_Name(String contributor_Name) {
-		this.contributor_Name = contributor_Name;
+	public void setContributorName(String contributorName) {
+		this.contributorName = contributorName;
 	}
 
 	public String getCountry() {
-		return this.country;
+		return country;
 	}
 
 	public void setCountry(String country) {
 		this.country = country;
 	}
 
-
-
-	public String getEmail_id() {
-		return this.email_id;
+	public boolean isEmailAddressValid() {
+		return emailAddressValid;
 	}
 
-	public void setEmail_id(String email_id) {
-		this.email_id = email_id;
+	public void setEmailAddressValid(boolean emailAddressValid) {
+		this.emailAddressValid = emailAddressValid;
 	}
 
-	public Timestamp getLast_Response_Time() {
-		return this.last_Response_Time;
+	public String getEmailId() {
+		return emailId;
 	}
 
-	public void setLast_Response_Time(Timestamp last_Response_Time) {
-		this.last_Response_Time = last_Response_Time;
+	public void setEmailId(String emailId) {
+		this.emailId = emailId;
+	}
+
+	public Timestamp getLastResponseTime() {
+		return lastResponseTime;
+	}
+
+	public void setLastResponseTime(Timestamp lastResponseTime) {
+		this.lastResponseTime = lastResponseTime;
 	}
 
 	public String getPincode() {
-		return this.pincode;
+		return pincode;
 	}
 
 	public void setPincode(String pincode) {
 		this.pincode = pincode;
 	}
 
-	public int getSchool_id() {
-		return this.school_id;
+	public int getSchoolId() {
+		return schoolId;
 	}
 
-	public void setSchool_id(int school_id) {
-		this.school_id = school_id;
+	public void setSchoolId(int schoolId) {
+		this.schoolId = schoolId;
 	}
 
-	public String getState_id() {
-		return this.state_id;
+	public String getStateId() {
+		return stateId;
 	}
 
-	public void setState_id(String state_id) {
-		this.state_id = state_id;
-	}
- 
-	
-	public boolean isEmail_Address_Valid() {
-		return email_Address_Valid;
-	}
-
-	public void setEmail_Address_Valid(boolean email_Address_Valid) {
-		this.email_Address_Valid = email_Address_Valid;
+	public void setStateId(String stateId) {
+		this.stateId = stateId;
 	}
 
 	public boolean isUnsubscribed() {
@@ -194,12 +191,11 @@ public class ContributorEntity implements Serializable {
 		this.unsubscribed = unsubscribed;
 	}
 
-	public String getWebsite_Url() {
-		return this.website_Url;
+	public String getWebsiteUrl() {
+		return websiteUrl;
 	}
 
-	public void setWebsite_Url(String website_Url) {
-		this.website_Url = website_Url;
+	public void setWebsiteUrl(String websiteUrl) {
+		this.websiteUrl = websiteUrl;
 	}
-
 }
